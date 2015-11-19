@@ -1,4 +1,4 @@
 from django import forms
 
-class uri(forms.Form):
+class Uri(forms.Form):
 	url=forms.CharField(label='Enter URL')

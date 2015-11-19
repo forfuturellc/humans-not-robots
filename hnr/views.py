@@ -1,18 +1,18 @@
 from django.shortcuts import render
 from .models import url
 
-from .forms import uri
+from .forms import Uri
 
 def home(request):
 	#print 'REQUEST IS:',request
 
-	form=uri()
+	form=Uri()
 	context={'form':form}
 	template="home.html"
 	return render(request,template,context)
 
 def contributors(request):
-	form=uri(request.POST or None)
+	form=Uri(request.POST or None)
 
 	if form.is_valid():
 		#print 'IS HERE:',form.cleaned_data
