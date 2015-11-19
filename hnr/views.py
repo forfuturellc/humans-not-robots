@@ -21,6 +21,6 @@ def contributors(request):
 
 
 	context={'data':data}
-	template="inhuman.html"
+	template="contributors.html"
 	return render(request,template,context)
 
