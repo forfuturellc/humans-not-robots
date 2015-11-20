@@ -17,7 +17,7 @@ def contributors(request):
 	if form.is_valid():
 		#print 'IS HERE:',form.cleaned_data
 		print form.cleaned_data['url']
-		data=url(form.cleaned_data['url'])
+		data=url(form.cleaned_data['url'].lower())
 
 
 	context={'data':data}
