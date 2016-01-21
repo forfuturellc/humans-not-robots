@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block form%}
+
+{%endblock%}
+
+
+{% block content %}
+<h1>Humans involved</h1>
+{%if data%}
+<ul>
+	{%for human in data%}
+	
+	
+	<li>{{human}} ------  {{human.name}}  ------ {{human.role}} ------ {{human.site}}</li>
+{%endfor%}
+
+</ul>
+
+<section></section>
+
+
+
+{% else %}
+	<p>"No humans involved"</p>
+{% endif %}
+
+{% endblock %}
