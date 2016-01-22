@@ -12,7 +12,7 @@ from .forms import Uri
 
 def home(request):
 
-	form=uri(request.POST or None)
+	form=Uri(request.POST or None)
 	context={'form':form}
 	template="index.html"
 	return render(request,template,context)
