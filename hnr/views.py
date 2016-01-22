@@ -18,7 +18,7 @@ def home(request):
 	return render(request,template,context)
 
 def humans(request):
-	form=uri(request.POST or None)
+	form=Uri(request.POST or None)
 	data=[]
 	template=loader.get_template('inhuman.html')
 

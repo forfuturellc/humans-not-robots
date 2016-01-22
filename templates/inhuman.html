@@ -9,18 +9,32 @@
 {% block content %}
 <h1>Humans involved</h1>
 {%if data%}
-<ul>
-	{%for human in data%}
-	
-	
-	<li>{{human}} ------  {{human.name}}  ------ {{human.role}} ------ {{human.site}}</li>
-{%endfor%}
 
-</ul>
+	<div class="container">
+    <div class="row stylish-panel">
+    {%for human in data%}
 
-<section></section>
+      <div class="col-md-4">
+        <div>
+          <img src="http://lorempixel.com/200/200/abstract/1/" alt="{{human.name}}" class="img-circle img-thumbnail">
+          <h2>{{human.role}}</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a href="{{human.site}}" class="btn btn-primary" title="See more">See works »</a>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+
+<!-- /container
+<li>{{human}}  {{human.name}}   {{human.role}}  {{human.site}}</li>
 
 
+
+
+ -->
 
 {% else %}
 	<p>"No humans involved"</p>
