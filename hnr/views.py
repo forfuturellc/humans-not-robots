@@ -33,7 +33,8 @@ def humans(request):
 						if 'team' in human_data and len(human_data['team'])>0:
 							for individual_dict in human_data['team']:
 								try:
-									human_obj,success=Humans.objects.get_or_create(twitter=individual_dict['twitter'],name=individual_dict['name'],role=individual_dict['role'],site=individual_dict['site'])
+									human_obj,success=Humans.objects.get_or_create(twitter=individual_dict['twitter'],
+										name=individual_dict['name'],role=individual_dict['role'])
 									human_obj.submitedurls_set.add(url_obj)
 								except:
 									return HttpResponse('Incomplete data about Human')
@@ -56,6 +57,13 @@ def humans(request):
 	#context=RequestContext(request,{'humans_list':data,})
 	#return render(request,template,context)
 	return HttpResponse(template.render(context))
+
+
+def humanstxt(request):
+	pass
+
+	
+
 
 
 def url_parser(s):

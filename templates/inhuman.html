@@ -7,26 +7,33 @@
 
 
 {% block content %}
-<h1>Humans involved</h1>
+<h1 class="text-centre">Humans involved</h1>
+<div class="container">
+
+<div class="jumbotron">
 {%if data%}
 
 	<div class="container">
     <div class="row stylish-panel">
     {%for human in data%}
 
-      <div class="col-md-4">
+      <div class="col-md-6		">
         <div>
-          <img src="http://lorempixel.com/200/200/abstract/1/" alt="{{human.name}}" class="img-circle img-thumbnail">
-          <h2>{{human.role}}</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <a href="{{human.site}}" class="btn btn-primary" title="See more">See works »</a>
+          <img src="{{human.twitter}}/profile_image?size=original" alt="{{human.name}}" class="img-circle img-thumbnail"  width="150" height="150">
+          <h2>{{human.name}}</h2>
+          <p>{{human.role}}</p>
+          <a href="{{human.site}}" class="btn btn-primary" title="See more">See Site »</a>
         </div>
       </div>
       {%endfor%}
     </div>
   </div>
+
+
+</div>
+</div>
+
+
 
 <!-- /container
 <li>{{human}}  {{human.name}}   {{human.role}}  {{human.site}}</li>

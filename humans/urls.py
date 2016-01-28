@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'hnr.views.home',name='home'),
     url(r'^humans/$', 'hnr.views.humans',name='humans'),
-
+    url(r'^humans\.txt/$',TemplateView.as_view(template_name='humans.txt',content_type='text/plain')),
+   
 ]

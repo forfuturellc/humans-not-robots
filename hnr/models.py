@@ -9,7 +9,7 @@ class Humans(models.Model):
 	twitter=models.URLField(unique=True)
 	name=models.CharField(max_length=70)
 	role=models.CharField(max_length=100)
-	site=models.URLField(null=True)
+	site=models.URLField(null=True,default=None)
 	
 	timetsamp=models.DateTimeField(auto_now_add=True,auto_now=False)
 	updated=models.DateTimeField(auto_now_add=False,auto_now=True)
