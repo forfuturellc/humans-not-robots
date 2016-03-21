@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load static from staticfiles %}
 
 {% block form%}
 
@@ -8,16 +7,16 @@
 
 {% block content %}
 <h1 class="text-centre">Humans involved</h1>
-<div class="container">
 
-<div class="jumbotron">
+
 {%if data%}
+	<div class="jumbotron">
 
 	<div class="container">
     <div class="row stylish-panel">
     {%for human in data%}
 
-      <div class="col-md-6		">
+      <div class="col-md-6	">
         <div>
           <img src="{{human.twitter}}/profile_image?size=original" alt="{{human.name}}" class="img-circle img-thumbnail"  width="150" height="150">
           <h2>{{human.name}}</h2>
@@ -31,20 +30,40 @@
 
 
 </div>
-</div>
-
 
 
 <!-- /container
-<li>{{human}}  {{human.name}}   {{human.role}}  {{human.site}}</li>
-
-
-
-
- -->
+<li>{{human}}  {{human.name}}   {{human.role}}  {{human.site}}</li> -->
 
 {% else %}
-	<p>"No humans involved"</p>
+	<div class="container">
+
+<div class="jumbotron">
+
+    <div class="row stylish-panel">
+
+      <div class="col-md-6 ">
+        <div>
+          <img src="https://twitter.com/oginga_s/profile_image?size=original" alt="{{human.name}}" class="img-circle img-thumbnail"  width="150" height="150">
+          <h2>Oginga Steven</h2>
+          <p>Designer</p>
+          <a href="forfuture.co.ke" class="btn btn-primary" title="See more">See Site »</a>
+        </div>
+      </div>
+      <div class="col-md-6 ">
+        <div>
+          <img src="http://twitter.com/GochoMugo/profile_image?size=original" alt="{{human.name}}" class="img-circle img-thumbnail"  width="150" height="150">
+          <h2>Gocho Mugo</h2>
+          <p>Designer</p>
+          <a href="forfuture.co.ke" class="btn btn-primary" title="See more">See Site »</a>
+        </div>
+      </div>
+      
+    </div>
+
+
+</div>
+</div>
 {% endif %}
 
 {% endblock %}

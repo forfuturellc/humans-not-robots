@@ -16,11 +16,42 @@
 
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://snipplicious.com/css/bootstrap-3.1.1.min.css">
+	<link rel="stylesheet" type="text/css" href="http://snipplicious.com/css/font-awesome-4.0.3.min.css">
     <script type="text/javascript">
 		var infolinks_pid = 2113816;
 		var infolinks_wsid = 1;
 	</script>
 	<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+	<style type="text/css">
+	.stylish-panel {
+    	padding: 20px 0;
+    	text-align: center;
+					}
+	.stylish-panel > div > div{
+    	padding: 10px;
+    	border: 1px solid transparent;
+    	border-radius: 4px;
+    	transition: 0.2s;
+						}
+	.stylish-panel > div:hover > div{
+    	margin-top: -10px;
+    	border: 1px solid rgb(200, 200, 200);
+    	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    	background: rgba(200, 200, 200, 0.1);
+    	transition: 0.5s;
+						}
+
+	.stylish-panel > div:hover img {
+    	border-radius: 50%;
+    	-webkit-transform: rotate(360deg);
+    	-moz-transform: rotate(360deg);
+    	-o-transform: rotate(360deg);
+    	-ms-transform: rotate(360deg);
+    	transform: rotate(360deg);
+			}
+
+	</style>
     
 
   </head>
@@ -102,32 +133,59 @@
 
 <!-- FOOTER -->
 
-<div id="div-contact" class="text-left">
+<footer class="footer-distributed">
 
-    <div class="row">
-        
-        <div class="col-sm-12 col-md-4"></div>
-        <div class="col-sm-12 col-md-4"></div>
-        <div class="col-sm-12 col-md-4"></div>
-        
-    </div>
+			<div class="footer-left">
 
-	<div class="row">
-		<div class="col-md-4">
-			 
-			<address>
-				 <strong>Twitter, Inc.</strong><br> 795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br> <abbr title="Phone">P:</abbr> (123) 456-7890
-			</address>
-		</div>
-		<div class="col-md-4">
-			<!--address -->
-		</div>
-		<div class="col-md-4">
-			<!--address -->
-		</div>
-	</div>
+				<h3><span>Forfuture</span></h3>
 
-</div>
+				<p class="footer-company-name">Forfuture &copy; 2016</p>
+				<div class="footer-icons">
+
+					<a href="https://www.facebook.com/forfuturellc"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.twitter.com/forfuturellc"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.linkedin.com/company/forfuture-limited"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+			</div>
+
+			<div class="footer-center">
+			<!--
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Revolution Street</span> Paris, France</p>
+				</div>
+				-->
+				<h3>Contact us</h3>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+254708805055 </p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">we@forfuture.co.ke</a></p>
+				</div>
+
+
+
+
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					A mobile and web app development company that people trust 
+				</p>
+
+				
+
+			</div>
+
+		</footer>
 
 
     <script src="{%static 'js/jquery.min.js' %}"></script>

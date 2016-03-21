@@ -1,10 +1,10 @@
 from django.db import models
 import argparse
-#import humanstxt
 
-#regexlib.com/Search.aspx?k=url&AspxAutoDetectCookieSupport=1
-#if website not available heroku returns empty dict
+'''
+Models that create the database tables fields
 
+'''
 class Humans(models.Model):
 	twitter=models.URLField(unique=True)
 	name=models.CharField(max_length=70)
